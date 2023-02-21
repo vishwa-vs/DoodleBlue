@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Email Registration Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .form-box {
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        max-width: 1200px;
+      }
+      .form-box__left {
+        flex: 0 0 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px;
+      }
+      .form-box__right {
+        flex: 0 0 57%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px;
+        border-left: 1px solid #ccc;
+      }
+      .form-box__heading {
+        margin-top: 0;
+      }
+      .form-box__label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .form-box__input {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 16px;
+      }
+      .form-box__submit {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .form-box__input--wide {
+        width: 100%;
+        height: 150px;
+        resize: none;
+      }
+    </style>
+  </head>
+  <body>
+  <form action="saveemails" method="post">
+    <div class="form-container">
+      <div class="form-box">
+        <div class="form-box__left">
+          <h1 class="form-box__heading">Dispatch Mail</h1>
+          <label class="form-box__label" for="email">Email:</label>
+          <input class="form-box__input" type="text" id="email" name="uEmail" required>
+          <input class="form-box__submit" type="submit" value="Submit">
+        </div>
+        <div class="form-box__right">
+          <h2 class="form-box__heading">Email Details</h2>
+          <label class="form-box__label" for="subject">Subject:</label>
+          <input class="form-box__input" type="text" id="subject" name="uEmailSubject" required>
+          
+          <label class="form-box__label" for="body">Body:</label>
+          <textarea class="form-box__input form-box__input--wide" id="body" name="uEmailBody" rows="10" required></textarea>
+        
+          <label class="form-box__label" for="header">Header:</label>
+          <input class="form-box__input" type="text" id="header" name="uEmailHeader" required>
+         
+          <label class="form-box__label" for="footer">Footer:</label>
+          <input class="form-box__input" type="text" id="footer" name="uEmailFooter" required>
+        </div>
+       </div>
+       </div>
+       </form>
+          </body>
+</html>
